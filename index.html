@@ -38,7 +38,6 @@
 
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
@@ -73,6 +72,58 @@
         </div>
     </div>
 
+    <div class="modal fade" id="reservemodal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Reserve A Table</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2" for="Nog">Number of Guests</label>
+                            <div class="col-md-10">
+                                <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
+                                <label class="radio-inline ml-2"><input type="radio" name="optradio"> 2</label>
+                                <label class="radio-inline ml-2"><input type="radio" name="optradio"> 3</label>
+                                <label class="radio-inline ml-2"><input type="radio" name="optradio"> 4</label>
+                                <label class="radio-inline ml-2"><input type="radio" name="optradio"> 5</label>
+                                <label class="radio-inline ml-2"><input type="radio" name="optradio"> 6</label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2" for="section">Section</label>
+                            <div class="btn-group btn-group-toggle ml-2" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="nonsmoking" id="nonsmoking" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="smoking" id="smoking"> Smoking
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date&time" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-6 col-md-5">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-6 col-md-5">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="btn btn-inline offset-md-2 col-md-2">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary ml-1">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -86,7 +137,7 @@
                             <img src="img/logo.png" class="img-fluid">
                         </div>
                         <div class="col-12 offset-1 col-sm align-self-center">
-                            <a class="btn btn-sm btn-block btn-warning" data-placement="bottom" data-toggle="tooltip" data-html="true" title="or Call us at <br/><strong>+91 1234567890</strong>" role="button" href="#reserve">Reserve Table</a>
+                            <a class="btn btn-sm btn-block btn-warning" role="button" href="#reservemodal" data-toggle="modal">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -143,6 +194,11 @@
                 <div class="media">
                     <img src="img/uthappizza.png" alt="Uthappizza" class="d-flex mr-3 img-thumbnail align-self-center">
                     <div class="media-body">
+                        <h2 class="mt-0">Uthappizza
+                            <span class="badge badge-danger">HOT</span>
+                            <span class="badge badge-pill badge-secondary">$4.99</span>
+                        </h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>               
                     </div>
                 </div>
             </div>
@@ -156,6 +212,8 @@
             <div class="col-12 order-sm-last col-sm col-md">
                 <div class="media">
                     <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>                
                     </div>
                     <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Weekend Grand Buffet">
                 </div>
@@ -170,46 +228,12 @@
                 <div class="media">
                     <img src="img/alberto.png" alt="Alberto Somayya" class="d-flex mr-3 img-thumbnail align-self-center">
                     <div class="media-body">
+                        <h2 class="mt-0">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>        
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row row-content" id="reserve">
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="card">
-                    <h2 class="card-header bg-warning text-white">Reserve A Table</h2>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label class="col-form-label col-md-2" for="Nog">Number of Guests</label>
-                                <div class="col-md-10">
-                                    <label class="radio-inline"><input type="radio" name="optradio"> 1</label>
-                                    <label class="radio-inline ml-2"><input type="radio" name="optradio"> 2</label>
-                                    <label class="radio-inline ml-2"><input type="radio" name="optradio"> 3</label>
-                                    <label class="radio-inline ml-2"><input type="radio" name="optradio"> 4</label>
-                                    <label class="radio-inline ml-2"><input type="radio" name="optradio"> 5</label>
-                                    <label class="radio-inline ml-2"><input type="radio" name="optradio"> 6</label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="date&time" class="col-12 col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-6 col-md-5">
-                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                                </div>
-                                <div class="col-6 col-md-5">
-                                    <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 
@@ -258,11 +282,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
