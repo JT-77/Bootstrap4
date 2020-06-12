@@ -183,6 +183,14 @@
                     </ol>
                     <a class="carousel-control-prev" href="#headCarousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
                     <a class="carousel-control-next" href="#headCarousel" role="button" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                    <div class="btn-group" id="carouselbuttons">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +286,17 @@
            </div>
         </div>
     </footer>
-
+    <script>
+        $(document).ready(function(){
+            $("#headCarousel").carousel({ interval: 2000 });
+            $("#carousel-pause").click( function(){
+                $("#headCarousel").carousel('pause');
+            });
+            $("#carousel-play").click( function(){
+                $("#headCarousel").carousel('cycle');
+            });
+        });
+    </script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
